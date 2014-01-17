@@ -8,4 +8,7 @@
   <div class="body">
     <%= topic.body %>
   </div>
+  <div class="comments">
+    <%= render partial: "comments/panel", as: :comment, collection: topic.comments  %>
+  </div>
 </div>
