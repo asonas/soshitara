@@ -43,3 +43,11 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+group :development, :test do
+  gem "rspec-rails"
+  gem "guard"
+  gem 'fabrication-rails'
+  gem "spring"
+  gem "rb-fsevent"
+end
