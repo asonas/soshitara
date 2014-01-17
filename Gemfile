@@ -33,6 +33,9 @@ group :doc do
 end
 
 gem 'devise'
+gem "therubyracer"
+gem "less-rails"
+gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails', branch: "bootstrap3"
 
 group :development, :test do
   gem "pry"
