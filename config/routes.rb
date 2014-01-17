@@ -5,7 +5,6 @@ Soshitara::Application.routes.draw do
     resources :comments
   end
 
-  devise_for :users
   resources :users
 
   root "page#index"
