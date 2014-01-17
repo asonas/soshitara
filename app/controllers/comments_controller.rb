@@ -14,6 +14,7 @@ class CommentsController < ApplicationController
 
   # GET /comments/new
   def new
+    @topic = Topic.find(params[:topic_id])
     @comment = Comment.new
   end
 
@@ -26,10 +27,11 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     @comment.user_id = 0
+    @comment.topic_id = params[:topic_id]
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
+        format.html { redirect_to @comment.topic, notice: 'Comment was successfully created.' }
         format.json { render action: 'show', status: :created, location: @comment }
       else
         format.html { render action: 'new' }

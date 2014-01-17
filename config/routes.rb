@@ -1,9 +1,9 @@
 Soshitara::Application.routes.draw do
   resources :favorites
 
-  resources :comments
-
-  resources :topics
+  resources :topics do
+    resources :comments
+  end
 
   devise_for :users
   resources :users
