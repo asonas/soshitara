@@ -11,3 +11,4 @@ class CreateTopics < ActiveRecord::Migration
     add_index :topics, :user_id
   end
 end
+
