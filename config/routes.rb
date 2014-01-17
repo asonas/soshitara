@@ -1,4 +1,6 @@
 Soshitara::Application.routes.draw do
+  resources :comments
+
   resources :topics
 
   resources :users
