@@ -25,11 +25,7 @@ class TopicsController < ApplicationController
   # POST /topics.json
   def create
     @topic = Topic.new(topic_params)
-    if current_user
-      @topic.user = current_user
-    else
-      @topic.user = 0
-    end
+    @topic.user_id = 0
 
     respond_to do |format|
       if @topic.save
