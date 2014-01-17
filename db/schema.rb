@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20140117131718) do
   add_index "topics", ["user_id"], name: "index_topics_on_user_id"
 
   create_table "users", force: true do |t|
-    t.string   "name",                                            null: false
+    t.string   "name"
     t.text     "profile",                limit: 300
     t.datetime "created_at"
     t.datetime "updated_at"
