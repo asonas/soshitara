@@ -37,6 +37,11 @@ gem "therubyracer"
 gem "less-rails"
 gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails', branch: "bootstrap3"
 
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
+
 group :development, :test do
   gem "pry"
   gem "awesome_print"
